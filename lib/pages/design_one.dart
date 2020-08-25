@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:login_ui/pages/design_three.dart';
 import 'package:login_ui/pages/design_two.dart';
 
 class DesignOne extends StatefulWidget {
@@ -63,11 +64,19 @@ class _DesignOneState extends State<DesignOne> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    "Forget Password?",
-                    style: TextStyle(
-                        color: Colors.green,
-                        decoration: TextDecoration.underline),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ForgotPassword()));
+                    },
+                    child: Text(
+                      "Forget Password?",
+                      style: TextStyle(
+                          color: Colors.green,
+                          decoration: TextDecoration.underline),
+                    ),
                   ),
                 ],
               ),
