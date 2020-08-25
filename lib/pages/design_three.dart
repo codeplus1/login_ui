@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:login_ui/pages/design_one.dart';
 
-class Signup extends StatefulWidget {
+class LostPassword extends StatefulWidget {
   @override
-  _SignupState createState() => _SignupState();
+  _LostPasswordState createState() => _LostPasswordState();
 }
 
-class _SignupState extends State<Signup> {
+class _LostPasswordState extends State<LostPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(30, 100, 30, 0),
@@ -21,45 +19,41 @@ class _SignupState extends State<Signup> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "SignUp",
+                        text: "Lost\n",
+                        style: TextStyle(
+                            fontSize: 80,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black87)),
+                    TextSpan(
+                      text: "Password",
                       style: TextStyle(
                           fontSize: 80,
                           fontWeight: FontWeight.w600,
                           color: Colors.black87),
                     ),
                     TextSpan(
-                      text: ".",
+                      text: "?\n",
                       style: TextStyle(
                           fontSize: 80,
                           fontWeight: FontWeight.w600,
                           color: Colors.green),
                     ),
+                    TextSpan(
+                      text: "Don't worry we are here",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black45),
+                    ),
                   ],
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               TextField(
-                decoration: InputDecoration(hintText: "USERNAME"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(hintText: "E-mail"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(hintText: "Password"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                decoration: InputDecoration(hintText: "Confirm Password"),
+                decoration:
+                    InputDecoration(hintText: "Registered E-mail/Mobile No."),
               ),
               Row(
                 children: [
@@ -72,45 +66,31 @@ class _SignupState extends State<Signup> {
                       color: Colors.green,
                       onPressed: () {},
                       child: Text(
-                        "SignUp",
+                        "RESET PASSWORD",
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
                 ],
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: OutlineButton.icon(
-                      icon: Icon(FontAwesome.facebook),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                      onPressed: () {},
-                      label: Text(
-                        "Signup with facebook",
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DesignOne()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LostPassword()));
                     },
                     child: RichText(
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: "Already have an Account? ",
+                            text: "Go To ",
                             style: TextStyle(color: Colors.black87),
                           ),
                           TextSpan(
